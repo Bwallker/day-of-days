@@ -151,6 +151,7 @@ impl State {
         
         self.set_year(self.last_year, Day::WEDNESDAY);
         println!("{}", self.get_year(self.last_year));
+        println!("{:?}", self.years);
         
     }
 
@@ -174,7 +175,7 @@ fn main() {
         let inputs_ref = &mut inputs;
 
         let (first_year_, last_year_) = get_years(inputs_ref);
-        last_year =last_year_;
+        last_year = last_year_;
         first_year = first_year_;
         years = Vec::with_capacity((last_year-first_year+1) as usize);
         for _ in first_year..last_year+1 {
